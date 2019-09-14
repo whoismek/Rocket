@@ -182,7 +182,7 @@ void add_patch(const string& from,const string& to){
     patches[from]=to;
 }
 int pct;
-string fastmath("\xf3\x0f\x1e\xfa\x0f\xae\x5c\x24\xfc\x81\x4c\x24\xfc\x40\x80\x00\x00\x0f\xae\x54\x24\xfc\xe9\x00\x00\x00\x00",27);
+string fastmath; //("\xf3\x0f\x1e\xfa\x0f\xae\x5c\x24\xfc\x81\x4c\x24\xfc\x40\x80\x00\x00\x0f\xae\x54\x24\xfc\xe9\x00\x00\x00\x00",27)
 char* hole;
 uintptr_t hole_off;
 void apply_patch(){
@@ -320,6 +320,8 @@ void apply_fmath(){
     }
 }
 int main(int ac,char** av){
+    auto x=b.name_fn["set_fast_math"];
+    fastmath=string(b.bufx+x->off,x->size-1)+"\xe9\x00\x00\x00\x00"s;
     reg_patches(false);
     apply_patch();
     apply_fmath();

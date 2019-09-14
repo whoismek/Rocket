@@ -85,7 +85,7 @@ return *a;
 }
 
 
-u64 O_ZNK8SubChunk8getBlockEt(u64 th,unsigned short a2){
+u64 Q_ZNK8SubChunk8getBlockEt(u64 th,unsigned short a2){
 return (*(u64 (**)(u64, u64))(**((u64 **)th + 4) + 24LL))(*((u64 *)th + 4), a2);
 }
 u64 Q_ZNK28SubChunkBlockStoragePalettedILm4ELN20SubChunkBlockStorage4TypeE4EE8getBlockEt(u64 a1,unsigned short a2){
