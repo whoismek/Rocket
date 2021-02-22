@@ -20,10 +20,10 @@ Run Server:
 Hint:
 for better performance,consider using https://github.com/Sysca11/bdlauncher with "opti.so"
 
-使用方法
+usage:
 gcc -Ofast -march=native optim.cpp -o optiserver
 ./rocket
-使用./server.out执行服务器
-QQ group 955765957
+output:
+./server.out
 
 </pre>
